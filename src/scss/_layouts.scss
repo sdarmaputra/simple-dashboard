@@ -1,0 +1,135 @@
+.sidebar {
+	background: $brand-dark-bg;
+	color: darken($brand-light, 20%);
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+	width: $sidebar-width;
+	z-index: 1;
+	@include populate-animation(all 0.2s ease-in);
+
+	&.collapsed {
+		width: 0;
+	}
+
+	.logo {
+		background: lighten($brand-dark-bg, 2.5%);
+		color: darken($brand-light, 8%);
+		display: block;
+		font-size: 1.5em;
+		height: $navbar-height;
+		line-height: $navbar-height;
+		padding: 0 30px;
+		text-align: left;
+		text-decoration: none;
+		white-space: nowrap;
+		width: 100%;
+
+		.logo-minified {
+			display: none;
+		}
+	}
+
+	.sidebar-nav {
+		ul.sidebar-navigation {
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+
+			li {
+				cursor: pointer;
+				padding: 15px 30px;
+				@include populate-animation(all 0.15s ease-in);
+
+				a {
+					text-decoration: none;
+					color: darken($brand-light, 20%);
+
+					.dropdown-indicator {
+						float: right;
+						@include populate-animation(all 0.15s ease-in);
+					}
+				}
+
+				&:hover {
+					background: darken($brand-dark-bg, 1.5%);
+					color: $brand-light;
+					
+					a {
+						color: $brand-light;
+					}
+					
+				}
+
+				&.has-dropdown {
+					> ul {
+						height: 0;
+						list-style-type: none;
+						margin: 0 0 0 -30px;
+						overflow: hidden;
+						padding: 0;
+						width: $sidebar-width;			
+						@include populate-animation(all 0.5s ease);			
+
+						li {
+							padding-left: 50px;
+							&:hover {
+								background: darken($brand-dark-bg, 4%);
+								color: $brand-light;
+							}
+						}
+					}
+
+					&.opened {
+						background: darken($brand-dark-bg, 1.5%);
+						color: $brand-light;
+
+						> ul {
+							margin: 10px 0 0 -30px;
+						}
+
+						a {
+							color: $brand-light;
+						}
+
+						a .dropdown-indicator {							
+							transform: rotate(90deg);
+							-webkit-transform: rotate(90deg);
+							-moz-transform: rotate(90deg);
+							-ms-transform: rotate(90deg);
+						}
+					}
+				}
+			}
+		}		
+	}
+}
+
+.main {
+	padding-left: 250px;
+	z-index: 0;
+	@include populate-animation(all 0.2s ease-in);
+
+	&.expanded {
+		padding-left: 0;
+
+		.main-area-expand-btn:before {
+			content: "\e88d";
+		}
+	}
+
+	.main-header {
+		.main-navigation {
+			padding: 0 30px;
+		}
+	}
+
+	.main-area-expand-btn {
+		font-family: 'Linearicons-Free';
+		@include populate-animation(all 0.2s ease-in);
+		
+		&:before {
+			content: "\e88c";
+		}	
+	}
+}

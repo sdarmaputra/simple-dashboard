@@ -1,0 +1,27 @@
+// Transparent Pager
+.transparent-pager {
+  padding-left: 0;
+  margin: $line-height-computed 0;
+  list-style: none;
+  text-align: center;
+  @include clearfix;
+  li {
+    display: inline;
+    > a,
+    > span {
+      display: inline-block;
+      padding: 5px 14px;
+      background-color: transparent;
+      color: $pager-border;
+      border: 1px solid $pager-border;
+      border-radius: $pager-border-radius;
+    }
+
+    > a:hover,
+    > a:focus {
+      text-decoration: none;
+      background-color: $pager-hover-bg;
+      color: $brand-primary;
+    }
+  }
+}

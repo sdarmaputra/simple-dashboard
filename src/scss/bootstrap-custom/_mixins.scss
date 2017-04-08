@@ -1,0 +1,6 @@
+@mixin populate-animation($options) {
+	transition: $options;
+    -ms-transition: $options;
+    -moz-transition: $options;
+    -webkit-transition: $options;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/main.css">
+    <link rel="stylesheet" href="./stylesheets/linearicons.css">
+    <script src="./javascripts/jquery.min.js"></script>
+    <title>Simple Dashboard</title>
+  </head>
+  <body>
+    <aside class="sidebar"><a class="logo" href="#"><span class="logo-minified">SD</span><span class="logo-extended">Simple Dashboard</span></a>
+      <nav class="sidebar-nav">
+        <ul class="sidebar-navigation">
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Elements</a></li>
+          <li><a href="#">Panels</a></li>
+          <li class="has-dropdown"><a href="#">Pages<i class="dropdown-indicator lnr lnr-chevron-right"></i></a>
+            <ul>
+              <li><a href="#">Login</a></li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Not Found		</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <section class="main">
+      <header class="main-header">
+        <nav class="navbar navbar-default main-navigation">
+          <ul class="nav navbar-nav navbar-left">
+            <li><a class="main-area-expand-btn" href="#"></a></li>
+          </ul>
+          <form class="navbar-form navbar-left">
+            <div class="form-group">
+              <input class="form-control navbar-search-input" type="text" name="search" placeholder="I'am looking for...">
+            </div>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><i class="lnr lnr-alarm"></i></a></li>
+            <li><a href="#"><i class="lnr lnr-user"></i></a></li>
+          </ul>
+        </nav>
+      </header>
+      <footer>
+        Copyright &copy; 2017 <a href="https://github.com/sdarmaputra">@sdarmaputra</a>. All rights reserved.
+        
+      </footer>
+    </section>
+    <script src="./javascripts/dashboard.js"></script>
+  </body>
+</html>

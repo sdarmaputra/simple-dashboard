@@ -1,0 +1,19 @@
+doctype html
+html(lang='en')
+	head
+		meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+		link(rel='stylesheet' href='./stylesheets/main.css')
+		link(rel='stylesheet' href='./stylesheets/linearicons.css')
+		script(src='./javascripts/jquery.min.js')
+		title Simple Dashboard
+	body
+		include _sidebar.pug
+		section(class='main')
+			include _nav.pug
+
+			block content
+
+			footer.
+				Copyright &copy; 2017 <a href="https://github.com/sdarmaputra">@sdarmaputra</a>. All rights reserved.
+				
+		script(src='./javascripts/dashboard.js')

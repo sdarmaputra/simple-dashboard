@@ -1,0 +1,13 @@
+.panel-login {
+  @include panel-variant(transparent, $panel-default-text, $panel-bg, transparent);
+  border: 0px;
+  margin: 150px auto 20px;
+  width: 300px;
+
+  .panel-heading {
+    font-size: $font-size-h4;
+    font-weight: bold;
+    padding-top: 30px;
+    text-align: center;
+  }
+}
